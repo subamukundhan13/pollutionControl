@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel='stylesheet' href='/stylesheets/dashboard.css' />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="/javascripts/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Pollution Control</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <center>
+      <h1>Welcome to the dashboard page</h1>
+      <p>You can view the current data from the sensor on this page. Furthermore, the data<br> is also displayed using
+        an accelerometer to enhance the user interface</p>
+      <div id="alcohol">
+        <h4>The current Air readings:</h4>
+        <table class="centered">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>15-04-1998</td>
+              <td>7:00:53</td>
+              <td>Vikram</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </center>
+  </main>
+
+  <footer class="page-footer" style="background-color: black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Pollution Control</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="grey-text text-lighten-4">Copyrights @2018 Pollution Control</p>
+        </div>
+        <div class="col l2 offset-l2 s6">
+          <h6>About</h6>
+          <ul>
+            <li><a href="" class="grey-text text-lighten-3">Help</a></li>
+            <li><a href="" class="grey-text text-lighten-3">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col l2 s6">
+          <h6>Career</h6>
+          <ul>
+            <li><a href="" class="grey-text text-lighten-3">Engineer</a></li>
+            <li><a href="" class="grey-text text-lighten-3">Site Manager</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+    });
+  </script>
+</body>
+
+</html>
