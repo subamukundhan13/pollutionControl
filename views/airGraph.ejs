@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel='stylesheet' href='/stylesheets/dashboard.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="/javascripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">Pollution Control</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/tips">Tips</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="/">Home</a></li>
+            <li><a href="/tips">Tips</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <center>
+            <h1>Air Graphs</h1>
+            <p>You can view the air graphs created using the data from the sensors on this page. The data is normalized
+                by taking
+                the<br> average of the sensor data and displaying it in an easy to analyse form.</p>
+            <div class="container">
+                <h3>Weekly Basis</h3>
+                <div>
+                    <canvas id="air_weekly"></canvas>
+                </div>
+            </div>  
+            <br><br>
+            <div class="container">
+                <h3>Monthly Basis</h3>
+                <div>
+                    <canvas id="air_monthly"></canvas>
+                </div>
+            </div>
+            <br><br>
+            <div class="container">
+                <h3>Yearly Basis</h3>
+                <div>
+                    <canvas id="air_yearly"></canvas>
+                </div>
+            </div>
+        </center>
+    </main>
+    <br><br><br>
+
+    <footer class="page-footer" style="background-color: black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Pollution Control</h5>
+                    <p class="grey-text text-lighten-4">This website is a part of the final year project created by us
+                        with the
+                        topic "Air and Sound Pollution Control" under the guidance of Prof. Prachi Patil</p>
+                    <p class="grey-text text-lighten-4">Copyrights @2018 Pollution Control</p>
+                </div>
+                <div class="col l2 offset-l2 s6">
+                    <h6>About</h6>
+                    <ul>
+                        <li><a href="" class="grey-text text-lighten-3">Help</a></li>
+                        <li><a href="" class="grey-text text-lighten-3">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col l2 s6">
+                    <h6>Career</h6>
+                    <ul>
+                        <li><a href="" class="grey-text text-lighten-3">Engineer</a></li>
+                        <li><a href="" class="grey-text text-lighten-3">Site Manager</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js'></script>
+    <script src="/javascripts/charts-air.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+</body>
+
+</html>

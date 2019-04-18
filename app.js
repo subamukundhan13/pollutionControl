@@ -28,10 +28,61 @@ app.get("/", function (req, res) {
     res.render("index");
 })
 
-app.post("/realtime", function(req, res){
+app.post("/air", function(req, res){
     var result = JSON.parse(req.body.result)
     console.log(result);
-    io.sockets.emit('level', result);
+    io.sockets.emit('air', result);
+    res.send(200);
+})
+
+app.post("/air-sound", function(req, res){
+    var result = JSON.parse(req.body.result)
+    console.log(result);
+    io.sockets.emit('air-sound', result)
+    res.send(200);
+})
+
+app.get("/airGraph", function(req, res){
+    res.render("airGraph");
+})
+
+app.get("/login", function(req, res){
+    res.render("login");
+})
+
+app.get("/lineGraph", function(req, res){
+    res.render("lineGraph");
+})
+
+app.get("/soundGraph", function(req,res){
+    res.render("soundGraph");
+})
+
+app.get("/datalog", function(req,res){
+    res.render("datalog");
+})
+
+app.get("/tips", function(req, res){
+    res.render("tips");
+})
+
+app.post("/sound", function(req, res){
+    var result = JSON.parse(req.body.result);
+    console.log(result);
+    io.sockets.emit('sound', result);
+    res.send(200);
+})
+
+app.post("/sample", function(req, res){
+    console.log(req.body);
+    console.log(req.param);
+    console.log(req.params);
+    res.send(200);
+})
+
+app.get("/sample", function(req, res){
+    console.log(req.params);
+    console.log(req.param);
     res.send(200);
 })
 
